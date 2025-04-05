@@ -2,14 +2,15 @@ import React from "react";
 
 const StringCalculator = () => {
     return (
-        <div>
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
             <h2>String Calculator</h2>
             <input
                 type="text"
                 value={''}
                 placeholder="Enter numbers"
+                style={{ padding: "10px", width: "300px" }}
             />
-            <button>
+            <button style={{ marginLeft: "10px", padding: "10px 20px" }}>
                 Calculate
             </button>
             <p>Sum: 0</p>
