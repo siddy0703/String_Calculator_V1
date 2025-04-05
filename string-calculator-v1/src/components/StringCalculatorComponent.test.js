@@ -35,4 +35,14 @@ describe("StringCalculator", () => {
     test("supports multiple custom delimiters", () => {
         expect(add("//[*][%]\n1*2%3")).toBe(6); // Using `*` and `%` → `1 + 2 + 3 = 6`
     });
+
+    // Test 8: Supports multiple custom multi-character delimiters
+    test("supports multiple multi-character delimiters", () => {
+        expect(add("//[**][%%]\n1**2%%3")).toBe(6); // Using `**` and `%%` → `1 + 2 + 3 = 6`
+    });
+
+    // Test 9: Should throw an error if negative numbers are present
+    test("throws an error if negative numbers are present", () => {
+        expect(() => add("1,-2,3,-4")).toThrow("negative numbers not allowed: -2,-4"); // Since `-2` and `-4` are negative, it should throw an error message listing them.
+    });
 });
