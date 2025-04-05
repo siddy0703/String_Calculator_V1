@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 const StringCalculator = () => {
     return (
-        <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <div>
             <h2>String Calculator</h2>
             <input
                 type="text"
