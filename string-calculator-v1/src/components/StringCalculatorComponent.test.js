@@ -47,4 +47,5 @@ describe("StringCalculator Component", () => {
         // Check if the correct error message is displayed
         expect(screen.getByText(/negative numbers not allowed: -2,-4/i)).toBeInTheDocument();
     });
+
 });
