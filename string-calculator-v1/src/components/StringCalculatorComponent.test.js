@@ -25,4 +25,14 @@ describe("StringCalculator", () => {
     test("supports custom single-character delimiter", () => {
         expect(add("//;\n1;2")).toBe(3); // Using `;` as delimiter → `1 + 2 = 3`
     });
+
+    // Test 6: Supports custom multi-character delimiter
+    test("supports custom multi-character delimiter", () => {
+        expect(add("//[***]\n1***2***3")).toBe(6); // Using `***` as delimiter → `1 + 2 + 3 = 6`
+    });
+
+    // Test 7: Supports multiple custom single-character delimiters
+    test("supports multiple custom delimiters", () => {
+        expect(add("//[*][%]\n1*2%3")).toBe(6); // Using `*` and `%` → `1 + 2 + 3 = 6`
+    });
 });
