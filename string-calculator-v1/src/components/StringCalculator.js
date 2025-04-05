@@ -13,6 +13,7 @@ const StringCalculator = () => {
             <button style={{ marginLeft: "10px", padding: "10px 20px" }}>
                 Calculate
             </button>
+            <p style={{ color: "red" }}>Error</p>
             <p>Sum: 0</p>
         </div>
     );
