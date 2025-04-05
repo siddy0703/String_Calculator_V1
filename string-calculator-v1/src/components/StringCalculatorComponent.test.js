@@ -15,4 +15,14 @@ describe("StringCalculator", () => {
     test("returns the sum of two numbers separated by a comma", () => {
         expect(add("1,5")).toBe(6);
     });
+
+    // Test 4: Supports new line (`\n`) as a separator along with comma
+    test("handles newline as a separator", () => {
+        expect(add("1\n2,3")).toBe(6); // `1 + 2 + 3 = 6`
+    });
+
+    // Test 5: Supports custom delimiter (single-character), defined after `//`
+    test("supports custom single-character delimiter", () => {
+        expect(add("//;\n1;2")).toBe(3); // Using `;` as delimiter → `1 + 2 = 3`
+    });
 });
